@@ -10,6 +10,7 @@ import 'tippy.js/dist/tippy.css';
 import 'twin.macro';
 import '../setupApp';
 import '../styles/index.scss';
+import Triggers from './events/Triggers';
 
 export default function App() {
   return (
@@ -18,9 +19,9 @@ export default function App() {
       <Router>
         <div tw="w-screen min-h-screen overflow-x-hidden">
           <Navbar />
+          <Triggers></Triggers>
           <div tw="max-w-[800px] h-full mx-auto p-2 sm:p-4 mt-1">
             <Routes>
-              <Route path="/" element={<HomePage />} />
               <Route path="/verify" element={<VerifyPage />} />
             </Routes>
           </div>
